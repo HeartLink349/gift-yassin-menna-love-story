@@ -80,9 +80,9 @@
             background: radial-gradient(circle, rgba(185, 91, 112, .40), transparent 68%);
         }
         .login-card {
-            background: transparent; padding: 30px 20px;
+            background: transparent; padding: 20px 18px;
             border-radius: 40px; border: 0; text-align: center;
-            width: 90%; max-width: 400px; 
+            width: 92%; max-width: 400px; 
             box-shadow: none; 
             position: relative;
             z-index: 2;
@@ -102,9 +102,9 @@
         }
 
         .envelope {
-            width: min(78vw, 340px);
-            height: 230px;
-            margin: 0 auto 28px;
+            width: min(74vw, 310px);
+            height: 205px;
+            margin: 0 auto 20px;
             position: relative;
             display: block;
             transform-style: preserve-3d;
@@ -122,8 +122,8 @@
             position: absolute;
             left: 9%;
             right: 9%;
-            bottom: -34px;
-            height: 42px;
+            bottom: -30px;
+            height: 38px;
             border-radius: 50%;
             background: radial-gradient(ellipse, rgba(0,0,0,.62), transparent 72%);
             transform: translateZ(-45px) rotateX(72deg);
@@ -142,8 +142,8 @@
         }
 
         .envelope-back {
-            top: 48px;
-            height: 162px;
+            top: 42px;
+            height: 146px;
             border-radius: 20px 20px 28px 28px;
             background: linear-gradient(145deg, #ffc0cb 0%, #d9788d 46%, #773247 100%);
             border: 1px solid rgba(255, 235, 239, .30);
@@ -166,24 +166,24 @@
         }
 
         .letter-paper {
-            top: 28px;
+            top: 24px;
             width: 82%;
-            height: 142px;
+            height: 128px;
             border-radius: 18px;
             background: linear-gradient(180deg, rgba(255,255,255,.98), rgba(255,238,241,.94));
             color: #743244;
-            padding: 25px 18px 18px;
+            padding: 20px 16px 14px;
             box-shadow:
                 0 16px 34px rgba(0,0,0,.26),
                 inset 0 1px 0 rgba(255,255,255,.9);
-            transform: translateY(44px) translateZ(8px);
+            transform: translateY(40px) translateZ(8px);
             transition: transform .95s cubic-bezier(.2,.8,.2,1), opacity .55s ease;
             opacity: .98;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
         }
 
         .letter-paper::before,
@@ -196,19 +196,19 @@
         }
 
         .letter-paper b {
-            font-size: 19px;
+            font-size: 18px;
             letter-spacing: .2px;
         }
 
         .letter-paper span {
-            font-size: 12px;
+            font-size: 11px;
             color: rgba(116,50,68,.70);
             font-weight: 700;
         }
 
         .envelope-front {
-            bottom: 20px;
-            height: 142px;
+            bottom: 16px;
+            height: 128px;
             border-radius: 0 0 28px 28px;
             background:
                 linear-gradient(34deg, #8c4052 0 50%, transparent 50.4%),
@@ -233,8 +233,8 @@
         }
 
         .envelope-flap {
-            top: 48px;
-            height: 116px;
+            top: 42px;
+            height: 106px;
             transform-origin: 50% 0%;
             transform: rotateX(0deg) translateZ(34px);
             transition: transform 1.05s cubic-bezier(.22,.95,.2,1), filter .75s ease;
@@ -251,9 +251,9 @@
         .envelope-seal {
             position: absolute;
             left: 50%;
-            top: 126px;
-            width: 58px;
-            height: 58px;
+            top: 114px;
+            width: 54px;
+            height: 54px;
             transform: translateX(-50%) translateZ(48px);
             border-radius: 50%;
             background:
@@ -278,7 +278,7 @@
         .envelope-title {
             display: block;
             font-weight: 950;
-            font-size: clamp(28px, 9vw, 42px);
+            font-size: clamp(26px, 8vw, 38px);
             line-height: 1.15;
             background: linear-gradient(135deg, #ffffff, #ffe3ea 38%, #f7b5c4 100%);
             -webkit-background-clip: text;
@@ -286,37 +286,122 @@
             text-shadow: 0 20px 45px rgba(242,141,162,.16);
         }
 
-        .envelope-subtitle {
+        /* تصميم خانة الباسورد الفخمة */
+        .password-box {
+            margin: 18px auto 0;
+            max-width: 310px;
+            background: rgba(255, 255, 255, 0.055);
+            border: 1px solid rgba(255, 220, 228, 0.22);
+            border-radius: 26px;
+            padding: 14px 16px;
+            backdrop-filter: blur(18px);
+            -webkit-backdrop-filter: blur(18px);
+            box-shadow: 0 16px 36px rgba(0, 0, 0, 0.32), inset 0 1px 0 rgba(255, 255, 255, 0.1);
+            transition: 0.3s ease;
+        }
+
+        .password-input-wrap {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-input-wrap i {
+            position: absolute;
+            right: 15px;
+            color: var(--red-highlight);
+            font-size: 14px;
+            opacity: 0.85;
+            pointer-events: none;
+        }
+
+        .password-input {
+            width: 100%;
+            background: rgba(18, 5, 9, 0.55);
+            border: 1px solid rgba(255, 220, 228, 0.2);
+            border-radius: 999px;
+            padding: 11px 38px 11px 16px;
+            color: #fff;
+            font-family: 'Cairo', sans-serif;
+            font-size: 14px;
+            font-weight: 700;
+            text-align: center;
+            outline: none;
+            transition: 0.3s ease;
+            direction: ltr;
+        }
+
+        .password-input::placeholder {
+            color: rgba(255, 236, 240, 0.5);
+            font-size: 12px;
+            font-weight: 600;
+        }
+
+        .password-input:focus {
+            border-color: var(--primary);
+            box-shadow: 0 0 18px rgba(242, 141, 162, 0.32);
+            background: rgba(18, 5, 9, 0.75);
+        }
+
+        .unlock-btn {
+            width: 100%;
+            margin-top: 10px;
+            padding: 11px 20px;
+            border-radius: 999px;
+            border: 1px solid rgba(255, 230, 236, 0.28);
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: #fff;
+            font-family: inherit;
+            font-size: 13px;
+            font-weight: 800;
+            cursor: pointer;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 9px;
-            margin-top: 18px;
-            padding: 13px 22px;
-            border-radius: 999px;
-            border: 1px solid rgba(255, 220, 228, .22);
-            background: rgba(255,255,255,.06);
-            color: rgba(255,245,247,.82);
-            font-size: 13px;
-            font-weight: 800;
-            box-shadow: inset 0 1px 0 rgba(255,255,255,.08);
-            backdrop-filter: blur(16px);
-            -webkit-backdrop-filter: blur(16px);
+            gap: 8px;
+            box-shadow: 0 10px 24px rgba(185, 91, 112, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
         }
 
-        .envelope-subtitle i {
-            color: var(--red-highlight);
-            filter: drop-shadow(0 0 10px rgba(255, 194, 207, .42));
+        .unlock-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 14px 28px rgba(185, 91, 112, 0.48), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .password-error {
+            color: #ff99ac;
+            font-size: 11px;
+            font-weight: 700;
+            margin-top: 8px;
+            min-height: 16px;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+        }
+
+        .password-error.show {
+            opacity: 1;
+        }
+
+        @keyframes shakeError {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-7px); }
+            40%, 80% { transform: translateX(7px); }
+        }
+
+        .shake {
+            animation: shakeError 0.4s ease;
+            border-color: #ff6b8b !important;
         }
 
         .envelope-hint {
-            margin: 24px auto 0;
+            margin: 14px auto 0;
             color: rgba(255,236,240,.62);
             font-size: 12px;
             font-weight: 700;
         }
 
-        #page-1.opening .envelope-stage {
+        #page-1.opening .envelope-stage,
+        #page-1.opening .password-box {
             pointer-events: none;
         }
 
@@ -859,10 +944,10 @@
         <img id="hl-lightbox-img" src="" alt="صورة مكبرة" onclick="event.stopPropagation()">
     </div>
 
-    <!-- الصفحة 1: الواجهة -->
+    <!-- الصفحة 1: الواجهة + الباسورد -->
     <section id="page-1">
         <div class="login-card animate__animated animate__zoomIn">
-            <button class="envelope-stage" type="button" onclick="goToPage2()" aria-label="افتحي الجواب">
+            <button class="envelope-stage" type="button" onclick="checkPasswordAndOpen()" aria-label="افتحي الجواب">
                 <span class="envelope">
                     <span class="envelope-shadow"></span>
                     <span class="envelope-back"></span>
@@ -875,9 +960,20 @@
                     <span class="envelope-seal"><i class="fa-solid fa-heart"></i></span>
                 </span>
                 <span class="envelope-title">ياسين & منه</span>
-                <span class="envelope-subtitle"><i class="fa-solid fa-envelope-open-text"></i> افتحي الجواب</span>
             </button>
-            <p class="envelope-hint">اضغطي على الظرف عشان تفتحي الحكاية</p>
+
+            <div class="password-box" id="passBox">
+                <div class="password-input-wrap">
+                    <i class="fa-solid fa-lock"></i>
+                    <input type="text" id="passInput" class="password-input" placeholder="اكتبي الباسورد هنا ❤️" autocomplete="off" onkeydown="if(event.key === 'Enter') checkPasswordAndOpen()">
+                </div>
+                <button type="button" class="unlock-btn" onclick="checkPasswordAndOpen()">
+                    <i class="fa-solid fa-envelope-open-text"></i> افتحي الجواب
+                </button>
+                <div id="passError" class="password-error">الباسورد غير صحيح يا روحي، جربي تاني ❤️</div>
+            </div>
+
+            <p class="envelope-hint">اكتبي التاريخ السري واضغطي على فتح الجواب</p>
         </div>
     </section>
 
@@ -951,7 +1047,7 @@
                 <div class="slide-hint">اسحبي لتحت</div>
             </section>
 
-            <!-- الشريحة 3: الصور (تظهر كاملة + ميزة التكبير عند الضغط) -->
+            <!-- الشريحة 3: الصور (بعد حذف الصورة المحددة وتنسيق الـ 4 صور) -->
             <section class="slide-page story-section gallery-page">
                 <div class="story-panel gallery-heading">
                     <div class="section-label">صور من الحكاية</div>
@@ -959,23 +1055,19 @@
                 </div>
                 <div class="gallery">
                     <div class="glass-card show" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="https://d.top4top.io/p_3967zzvs11.jpg" data-original="https://d.top4top.io/p_3967zzvs11.jpg" alt="ذكرى 1">
-                        <div style="padding:20px; text-align:center; font-weight: 600;">أحلى صدفة في عمري ❤️</div>
-                    </div>
-                    <div class="glass-card show" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="https://c.top4top.io/p_3967ww85n1.jpg" data-original="https://c.top4top.io/p_3967ww85n1.jpg" alt="ذكرى 2">
+                        <img src="https://c.top4top.io/p_3967ww85n1.jpg" data-original="https://c.top4top.io/p_3967ww85n1.jpg" alt="ذكرى 1">
                         <div style="padding:20px; text-align:center; font-weight: 600;">ضحكتك هي حياتي ✨</div>
                     </div>
                     <div class="glass-card show" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="https://a.top4top.io/p_3967dbhce1.jpg" data-original="https://a.top4top.io/p_3967dbhce1.jpg" alt="ذكرى 3">
+                        <img src="https://a.top4top.io/p_3967dbhce1.jpg" data-original="https://a.top4top.io/p_3967dbhce1.jpg" alt="ذكرى 2">
                         <div style="padding:20px; text-align:center; font-weight: 600;">عالمي الخاص بيكي</div>
                     </div>
                     <div class="glass-card show" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="https://b.top4top.io/p_3967yj5xg1.jpg" data-original="https://b.top4top.io/p_3967yj5xg1.jpg" alt="ذكرى 4">
+                        <img src="https://b.top4top.io/p_3967yj5xg1.jpg" data-original="https://b.top4top.io/p_3967yj5xg1.jpg" alt="ذكرى 3">
                         <div style="padding:20px; text-align:center; font-weight: 600;">أجمل لحظاتي معاكي 🌸</div>
                     </div>
-                    <div class="glass-card show" style="grid-column: span 2;" onclick="openLightbox(this.querySelector('img').src)">
-                        <img src="https://g.top4top.io/p_3967p5cjo1.jpg" data-original="https://g.top4top.io/p_3967p5cjo1.jpg" alt="ذكرى 5">
+                    <div class="glass-card show" onclick="openLightbox(this.querySelector('img').src)">
+                        <img src="https://g.top4top.io/p_3967p5cjo1.jpg" data-original="https://g.top4top.io/p_3967p5cjo1.jpg" alt="ذكرى 4">
                         <div style="padding:20px; text-align:center; font-weight: 600;">بموت فيكي يا منه 💍</div>
                     </div>
                 </div>
@@ -1074,6 +1166,26 @@
         let counterStarted = false;
         let heartsStarted = false;
         let musicWasPlayingBeforeVideo = false;
+
+        /* التحقق من الباسورد 2007/11/20 قبل فتح الظرف */
+        function checkPasswordAndOpen() {
+            if (envelopeIsOpening) return;
+            const input = document.getElementById('passInput');
+            const error = document.getElementById('passError');
+            const passBox = document.getElementById('passBox');
+            const val = (input.value || '').trim();
+
+            if (val === '2007/11/20') {
+                error.classList.remove('show');
+                goToPage2();
+            } else {
+                error.classList.add('show');
+                passBox.classList.remove('shake');
+                void passBox.offsetWidth;
+                passBox.classList.add('shake');
+                input.focus();
+            }
+        }
 
         function goToPage2() {
             if (envelopeIsOpening) return;
